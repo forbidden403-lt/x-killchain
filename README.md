@@ -29,7 +29,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install subfinder assetfinder curl nuclei -y
 
 # Clone repositori dan berikan izin eksekusi
-git clone <URL_REPO_ANDA>
+git clone https://github.com/forbidden403-lt/x-killchain.git
 cd x-killchain
 chmod +x core/main.sh
 ```
