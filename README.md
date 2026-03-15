@@ -50,3 +50,21 @@ Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argu
 cd x-killchain/core
 ./main.sh <domain_target.com>
 ```
+
+### Alur Kerja (Pipeline):
+1. Reconnaissance (Stage 1): Mengumpulkan subdomain menggunakan `subfinder` dan `assetfinder`.
+
+2. Probing (Stage 2): Melakukan check konektivitas (HTTP/HTTPS) secara paralel menggunakan `curl`.
+
+3. Vulnerability Mapping (Stage 3): Menjalankan `nuclei` untuk memindai celah keamanan pada target yang aktif.
+
+Hasil akhir akan tersimpan di dalam folder
+`/storage/<domain_target>/stage3_vulns/vulnerabilities.txt`.
+
+### 💡 Tips Penting
+
+* Jika `nuclei` tidak menampilkan hasil, pastikan Anda telah menjalankan `nuclei -ut` untuk memperbarui templates.
+
+* Selalu periksa file `active_targets.txt` untuk memastikan target yang terdeteksi valid sebelum menjalankan pemindaian mendalam.
+
+* Gunakan dengan bijak dan pastikan Anda memiliki izin resmi untuk melakukan pengujian pada target.
