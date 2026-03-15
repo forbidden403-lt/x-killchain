@@ -37,11 +37,11 @@ chmod +x core/main.sh
 ### Windows (Via WSL2)
 Sangat disarankan menggunakan WSL2 (Windows Subsystem for Linux) dengan distro Kali atau Ubuntu.
 
-* **Buka PowerShell (Admin) dan jalankan: `wsl --install`.
+1. Buka PowerShell (Admin) dan jalankan: `wsl --install`.
 
-* **Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
+2. Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
 
-* **Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
+3. Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
 
 ### 📖 Cara Penggunaan
 Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argumen.
