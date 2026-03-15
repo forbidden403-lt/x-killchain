@@ -32,7 +32,7 @@ sudo apt install subfinder assetfinder curl nuclei -y
 git clone <URL_REPO_ANDA>
 cd x-killchain
 chmod +x core/main.sh
-
+```
 
 
 2. Windows (Via WSL2)
@@ -47,9 +47,10 @@ Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL 
 📖 Cara Penggunaan
 Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argumen.
 
-Bash
+```Bash
 cd x-killchain/core
 ./main.sh <domain_target.com>
+```
 Alur Kerja (Pipeline):
 Reconnaissance (Stage 1): Mengumpulkan subdomain menggunakan subfinder dan assetfinder.
 
