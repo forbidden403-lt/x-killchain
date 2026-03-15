@@ -34,14 +34,16 @@ cd x-killchain
 chmod +x core/main.sh
 ```
 
-### 2. Windows (Via WSL2)
+### Windows (Via WSL2)
 Sangat disarankan menggunakan WSL2 (Windows Subsystem for Linux) dengan distro Kali atau Ubuntu.
 
-1. Buka PowerShell (Admin) dan jalankan: `wsl --install`.
+* **Buka PowerShell (Admin) dan jalankan: `wsl --install`.
 
-2. Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
+* **Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
 
-3. Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
+* **Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
+
+---
 
 ### 📖 Cara Penggunaan
 Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argumen.
@@ -50,6 +52,7 @@ Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argu
 cd x-killchain/core
 ./main.sh <domain_target.com>
 ```
+---
 
 ### Alur Kerja (Pipeline):
 1. Reconnaissance (Stage 1): Mengumpulkan subdomain menggunakan `subfinder` dan `assetfinder`.
@@ -60,6 +63,8 @@ cd x-killchain/core
 
 Hasil akhir akan tersimpan di dalam folder
 `/storage/<domain_target>/stage3_vulns/vulnerabilities.txt`.
+
+---
 
 ### 💡 Tips Penting
 
