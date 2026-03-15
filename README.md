@@ -34,7 +34,7 @@ cd x-killchain
 chmod +x core/main.sh
 ```
 
-### Windows (Via WSL2)
+### 2. Windows (Via WSL2)
 Sangat disarankan menggunakan WSL2 (Windows Subsystem for Linux) dengan distro Kali atau Ubuntu.
 
 1. Buka PowerShell (Admin) dan jalankan: `wsl --install`.
