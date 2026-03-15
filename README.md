@@ -34,44 +34,19 @@ cd x-killchain
 chmod +x core/main.sh
 ```
 
-
-2. Windows (Via WSL2)
+### Windows (Via WSL2)
 Sangat disarankan menggunakan WSL2 (Windows Subsystem for Linux) dengan distro Kali atau Ubuntu.
 
-Buka PowerShell (Admin) dan jalankan: wsl --install.
+* **Buka PowerShell (Admin) dan jalankan: `wsl --install`.
 
-Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
+* **Setelah instalasi distro selesai, jalankan perintah instalasi Kali Linux di atas di dalam terminal WSL.
 
-Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
+* **Pastikan tools (nuclei, subfinder, dll) sudah terpasang di dalam lingkungan WSL tersebut.
 
-📖 Cara Penggunaan
+### 📖 Cara Penggunaan
 Alat ini bekerja dengan satu perintah utama. Masukkan domain target sebagai argumen.
 
-```Bash
+```bash
 cd x-killchain/core
 ./main.sh <domain_target.com>
 ```
-Alur Kerja (Pipeline):
-Reconnaissance (Stage 1): Mengumpulkan subdomain menggunakan subfinder dan assetfinder.
-
-Probing (Stage 2): Melakukan check konektivitas (HTTP/HTTPS) secara paralel menggunakan curl.
-
-Vulnerability Mapping (Stage 3): Menjalankan nuclei untuk memindai celah keamanan pada target yang aktif.
-
-Hasil akhir akan tersimpan di dalam folder /storage/<domain_target>/stage3_vulns/vulnerabilities.txt.
-
-🔍 Pembahasan untuk Tim
-Tool ini dirancang untuk membedah alur kill chain secara mendalam:
-
-Analisis Data: Memahami cara mengelola daftar attack surface dari hasil recon.
-
-Optimization: Mempelajari teknik multithreading (xargs -P) untuk mempercepat proses probing.
-
-Validation: Menggunakan payload pendukung untuk memvalidasi temuan secara manual setelah scanner memberikan indikasi celah.
-
-💡 Tips Penting
-Jika nuclei tidak menampilkan hasil, pastikan Anda telah menjalankan nuclei -ut untuk memperbarui templates.
-
-Selalu periksa file active_targets.txt untuk memastikan target yang terdeteksi valid sebelum menjalankan pemindaian mendalam.
-
-Gunakan dengan bijak dan pastikan Anda memiliki izin resmi untuk melakukan pengujian pada target.
