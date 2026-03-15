@@ -33,7 +33,6 @@ git clone <URL_REPO_ANDA>
 cd x-killchain
 chmod +x core/main.sh
 ```
---
 
 ### 2. Windows (Via WSL2)
 Sangat disarankan menggunakan WSL2 (Windows Subsystem for Linux) dengan distro Kali atau Ubuntu.
